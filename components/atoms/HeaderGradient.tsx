@@ -1,5 +1,5 @@
 import { LinearGradient } from 'expo-linear-gradient';
-import View from 'react-native-ui-lib/view';
+import { View } from 'react-native';
 
 export function HeaderGradient() {
   return (

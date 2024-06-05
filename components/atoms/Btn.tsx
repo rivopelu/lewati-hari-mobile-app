@@ -1,5 +1,5 @@
-import { Text } from 'react-native';
-import { Button } from 'react-native-ui-lib';
+import { Text } from '@rneui/base';
+import { Button } from '@rneui/themed';
 
 import { Colors } from '@/constants/Colors';
 
@@ -8,9 +8,15 @@ export function Btn(props: IProps) {
     <>
       <Button
         onPress={props.onPress}
-        backgroundColor={Colors.primary['10']}
-        style={{ borderColor: 'black', borderWidth: 1 }}>
-        <Text style={{ color: Colors.system.text }}>{props.text}</Text>
+        type="outline"
+        size="lg"
+        style={{
+          borderWidth: 1,
+          borderColor: '#000',
+          borderRadius: 9999,
+          backgroundColor: Colors.primary[10],
+        }}>
+        <Text style={{ color: Colors.primary.main, fontWeight: '700' }}>{props.text}</Text>
       </Button>
     </>
   );
