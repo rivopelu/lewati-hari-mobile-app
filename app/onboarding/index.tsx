@@ -49,7 +49,7 @@ export default function OnboardingScreen({ navigation }: any) {
                 <View style={{ alignItems: 'center', justifyContent: 'center' }}>
                   <View style={{ flexDirection: 'row', gap: 7 }}>
                     <Text>Belum Punya Akun ?</Text>
-                    <Link href="/onboarding/sign-in" style={{ padding: 0, margin: 0 }}>
+                    <Link href="/onboarding/sign-up" style={{ padding: 0, margin: 0 }}>
                       <Text style={{ color: Colors.primary.main }}>Silahkan Daftar</Text>
                     </Link>
                   </View>
