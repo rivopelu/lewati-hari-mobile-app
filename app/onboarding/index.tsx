@@ -1,4 +1,4 @@
-import { Link } from 'expo-router';
+import { Link, useRouter } from 'expo-router';
 import { Image, StatusBar, Text, View } from 'react-native';
 
 import { Btn } from '@/components/atoms/Btn';
@@ -7,7 +7,8 @@ import { HeaderGradient } from '@/components/atoms/HeaderGradient';
 import { Spacer } from '@/components/atoms/Spacer';
 import { Colors } from '@/constants/Colors';
 
-export default function OnboardingScreen() {
+export default function OnboardingScreen({ navigation }: any) {
+  const router = useRouter();
   return (
     <View style={{ flex: 1 }}>
       <StatusBar barStyle="dark-content" />
@@ -41,7 +42,7 @@ export default function OnboardingScreen() {
                   populer di sekitarmu
                 </Text>
               </View>
-              <Btn text="MASUK" />
+              <Btn text="MASUK" onPress={() => router.push('/onboarding/sign-in')} />
               <View style={{ alignItems: 'center', justifyContent: 'center' }}>
                 <View style={{ flexDirection: 'row', gap: 7 }}>
                   <Text>Belum Punya Akun ?</Text>

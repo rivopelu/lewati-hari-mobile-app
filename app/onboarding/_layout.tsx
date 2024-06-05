@@ -1,21 +1,21 @@
-import { Tabs } from 'expo-router';
+import { Stack } from 'expo-router';
 import React from 'react';
 
 export default function OnBoardingLayout() {
   return (
-    <Tabs screenOptions={{ tabBarStyle: { display: 'none' } }}>
-      <Tabs.Screen
+    <Stack>
+      <Stack.Screen
         name="index"
         options={{
           headerShown: false,
         }}
       />
-      <Tabs.Screen
+      <Stack.Screen
         name="sign-in"
         options={{
           headerShown: false,
         }}
       />
-    </Tabs>
+    </Stack>
   );
 }
