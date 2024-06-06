@@ -2,7 +2,7 @@ import { Card } from '@rneui/themed';
 import { Dimensions, Text, View } from 'react-native';
 import Carousel from 'react-native-reanimated-carousel/src/Carousel';
 
-import { SIZE } from '@/constants/STYLES';
+import { SIZE } from '@/src/constants/STYLES';
 
 export function AdsSwiper() {
   const width = Dimensions.get('window').width;

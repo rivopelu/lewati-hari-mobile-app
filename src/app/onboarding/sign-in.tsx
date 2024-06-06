@@ -3,14 +3,14 @@ import { Link, useRouter } from 'expo-router';
 import { useState } from 'react';
 import { StatusBar, View } from 'react-native';
 
-import { Btn } from '@/components/atoms/Btn';
-import { Container } from '@/components/atoms/Container';
-import { HeaderGradient } from '@/components/atoms/HeaderGradient';
-import { InputText } from '@/components/atoms/InputText';
-import MainCheckbox from '@/components/atoms/MainCheckbox';
-import { Spacer } from '@/components/atoms/Spacer';
-import MainProviders from '@/components/layouts/MainProviders';
-import { STYLES } from '@/constants/STYLES';
+import { Btn } from '@/src/components/atoms/Btn';
+import { HeaderGradient } from '@/src/components/atoms/HeaderGradient';
+import { InputText } from '@/src/components/atoms/InputText';
+import MainCheckbox from '@/src/components/atoms/MainCheckbox';
+import { MainContainer } from '@/src/components/atoms/MainContainer';
+import { Spacer } from '@/src/components/atoms/Spacer';
+import MainProviders from '@/src/components/layouts/MainProviders';
+import { STYLES } from '@/src/constants/STYLES';
 
 export default function SignInScreen() {
   const [showPassword, setShowPassword] = useState<boolean>(false);
@@ -22,7 +22,7 @@ export default function SignInScreen() {
         <HeaderGradient />
         <Spacer y={48} />
         <View style={{ justifyContent: 'space-around', flex: 1 }}>
-          <Container>
+          <MainContainer>
             <View style={{ alignItems: 'center', justifyContent: 'center', gap: 24 }}>
               <View
                 style={{
@@ -40,8 +40,8 @@ export default function SignInScreen() {
                 Masukin Email dan kata sandi untuk masuk
               </Text>
             </View>
-          </Container>
-          <Container>
+          </MainContainer>
+          <MainContainer>
             <View style={{ gap: 16 }}>
               <View>
                 <InputText
@@ -69,15 +69,17 @@ export default function SignInScreen() {
                 <View style={{ flexDirection: 'row', gap: 7 }}>
                   <Text>Belum Punya Akun ?</Text>
                   <Link href="/onboarding/sign-up" style={{ padding: 0, margin: 0 }}>
-                    <Text style={{ color: STYLES.primary.main }}>Silahkan Daftar</Text>
+                    <Text style={{ color: STYLES.COLORS.PRIMARY.MAIN }}>Silahkan Daftar</Text>
                   </Link>
                 </View>
               </View>
             </View>
-          </Container>
-          <Container>
-            <Text style={{ textAlign: 'center', color: STYLES.system.textGray }}>V 0.1.0</Text>
-          </Container>
+          </MainContainer>
+          <MainContainer>
+            <Text style={{ textAlign: 'center', color: STYLES.COLORS.SYSTEM.TEXT_GRAY }}>
+              V 0.1.0
+            </Text>
+          </MainContainer>
         </View>
       </View>
     </MainProviders>

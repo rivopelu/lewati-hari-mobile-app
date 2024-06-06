@@ -32,5 +32,6 @@ export const SIZE = {
   XS: 8,
   LG: 20,
   XL: 24,
+  BOTTOM_SPACE: 128,
   CONTAINER: 24,
 };

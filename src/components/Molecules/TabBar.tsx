@@ -2,7 +2,7 @@ import { AntDesign, Feather } from '@expo/vector-icons';
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-import { STYLES } from '@/constants/STYLES';
+import { STYLES } from '@/src/constants/STYLES';
 
 const TabBar = ({ state, descriptors, navigation }: any) => {
   const icons = {

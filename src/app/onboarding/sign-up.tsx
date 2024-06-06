@@ -1,17 +1,16 @@
 /* eslint-disable import/order */
 import React, { useState } from 'react';
 
-import MainProviders from '@/components/layouts/MainProviders';
-import { StatusBar, View, Text, ScrollView } from 'react-native';
-import { HeaderGradient } from '@/components/atoms/HeaderGradient';
-import { Spacer } from '@/components/atoms/Spacer';
-import { Container } from '@/components/atoms/Container';
-import MainCheckbox from '@/components/atoms/MainCheckbox';
-import { Btn } from '@/components/atoms/Btn';
+import { Image, ScrollView, StatusBar, Text, View } from 'react-native';
 import { Link } from 'expo-router';
-import { InputText } from '@/components/atoms/InputText';
-import { Image } from '@rneui/themed';
-import { STYLES } from '@/constants/STYLES';
+import MainProviders from '@/src/components/layouts/MainProviders';
+import { HeaderGradient } from '@/src/components/atoms/HeaderGradient';
+import { Spacer } from '@/src/components/atoms/Spacer';
+import { MainContainer } from '@/src/components/atoms/MainContainer';
+import { InputText } from '@/src/components/atoms/InputText';
+import MainCheckbox from '@/src/components/atoms/MainCheckbox';
+import { Btn } from '@/src/components/atoms/Btn';
+import { STYLES } from '@/src/constants/STYLES';
 
 export default function SignUpScreen() {
   const [showPassword, setShowPassword] = useState<boolean>(false);
@@ -24,7 +23,7 @@ export default function SignUpScreen() {
       <ScrollView>
         <View style={{ flex: 1 }}>
           <View style={{ justifyContent: 'space-around', flex: 1, gap: 32 }}>
-            <Container>
+            <MainContainer>
               <View style={{ alignItems: 'center', justifyContent: 'center' }}>
                 <View
                   style={{
@@ -43,8 +42,8 @@ export default function SignUpScreen() {
                   Yuk, masukin informasi kamu buat daftar
                 </Text>
               </View>
-            </Container>
-            <Container>
+            </MainContainer>
+            <MainContainer>
               <View style={{ gap: 16 }}>
                 <View>
                   <InputText
@@ -86,15 +85,17 @@ export default function SignUpScreen() {
                   <View style={{ flexDirection: 'row', gap: 7 }}>
                     <Text>Udah punya akun ?</Text>
                     <Link href="/onboarding/sign-in" style={{ padding: 0, margin: 0 }}>
-                      <Text style={{ color: STYLES.primary.main }}>Masuk disini</Text>
+                      <Text style={{ color: STYLES.COLORS.PRIMARY.MAIN }}>Masuk disini</Text>
                     </Link>
                   </View>
                 </View>
               </View>
-            </Container>
-            <Container>
-              <Text style={{ textAlign: 'center', color: STYLES.system.textGray }}>V 0.1.0</Text>
-            </Container>
+            </MainContainer>
+            <MainContainer>
+              <Text style={{ textAlign: 'center', color: STYLES.COLORS.SYSTEM.TEXT_GRAY }}>
+                V 0.1.0
+              </Text>
+            </MainContainer>
           </View>
         </View>
       </ScrollView>

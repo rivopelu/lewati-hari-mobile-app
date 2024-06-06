@@ -1,7 +1,7 @@
 import { ThemeProvider, createTheme } from '@rneui/themed';
 import React, { ReactNode } from 'react';
 
-import { STYLES } from '@/constants/STYLES';
+import { STYLES } from '@/src/constants/STYLES';
 
 export default function ThemeConfig(props: IProps) {
   const theme = createTheme({

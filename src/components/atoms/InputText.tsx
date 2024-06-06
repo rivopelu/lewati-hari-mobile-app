@@ -1,6 +1,6 @@
 import { KeyboardTypeOptions, StyleSheet, Text, TextInput, View } from 'react-native';
 
-import { STYLES } from '@/constants/STYLES';
+import { STYLES } from '@/src/constants/STYLES';
 
 export function InputText(props: IProps) {
   return (

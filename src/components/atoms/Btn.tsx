@@ -1,7 +1,7 @@
 import { Text } from '@rneui/base';
 import { Button } from '@rneui/themed';
 
-import { STYLES } from '@/constants/STYLES';
+import { STYLES } from '@/src/constants/STYLES';
 
 export function Btn(props: IProps) {
   return (

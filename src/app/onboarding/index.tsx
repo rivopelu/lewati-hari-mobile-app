@@ -1,12 +1,12 @@
 import { Link, useRouter } from 'expo-router';
 import { Image, StatusBar, Text, View } from 'react-native';
 
-import { Btn } from '@/components/atoms/Btn';
-import { Container } from '@/components/atoms/Container';
-import { HeaderGradient } from '@/components/atoms/HeaderGradient';
-import { Spacer } from '@/components/atoms/Spacer';
-import MainProviders from '@/components/layouts/MainProviders';
-import { STYLES } from '@/constants/STYLES';
+import { Btn } from '@/src/components/atoms/Btn';
+import { HeaderGradient } from '@/src/components/atoms/HeaderGradient';
+import { MainContainer } from '@/src/components/atoms/MainContainer';
+import { Spacer } from '@/src/components/atoms/Spacer';
+import MainProviders from '@/src/components/layouts/MainProviders';
+import { STYLES } from '@/src/constants/STYLES';
 
 export default function OnboardingScreen({ navigation }: any) {
   const router = useRouter();
@@ -17,7 +17,7 @@ export default function OnboardingScreen({ navigation }: any) {
         <HeaderGradient />
         <Spacer y={48} />
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-          <Container>
+          <MainContainer>
             <View
               style={{
                 flexDirection: 'column',
@@ -40,7 +40,7 @@ export default function OnboardingScreen({ navigation }: any) {
                     Temukan tempat terbaik yang cocok buat kamu
                   </Text>
                   <Spacer y={8} />
-                  <Text style={{ textAlign: 'center', color: STYLES.system.textGray }}>
+                  <Text style={{ textAlign: 'center', color: STYLES.COLORS.SYSTEM.TEXT_GRAY }}>
                     Jelajahi berbagai pilihan tempat menarik, dari cafe tersembunyi hingga coffee
                     shop populer di sekitarmu
                   </Text>
@@ -50,13 +50,13 @@ export default function OnboardingScreen({ navigation }: any) {
                   <View style={{ flexDirection: 'row', gap: 7 }}>
                     <Text>Belum Punya Akun ?</Text>
                     <Link href="/onboarding/sign-up" style={{ padding: 0, margin: 0 }}>
-                      <Text style={{ color: STYLES.primary.main }}>Silahkan Daftar</Text>
+                      <Text style={{ color: STYLES.COLORS.PRIMARY.MAIN }}>Silahkan Daftar</Text>
                     </Link>
                   </View>
                 </View>
               </View>
             </View>
-          </Container>
+          </MainContainer>
         </View>
       </View>
     </MainProviders>

@@ -3,13 +3,13 @@ import { useRouter } from 'expo-router';
 import React from 'react';
 import { TouchableOpacity, View } from 'react-native';
 
-import { Container } from '../atoms/Container';
+import { MainContainer } from '../atoms/MainContainer';
 import Typo from '../atoms/Typo';
 
 export default function HomeHeader() {
   const router = useRouter();
   return (
-    <Container>
+    <MainContainer>
       <View>
         <View
           style={{
@@ -32,6 +32,6 @@ export default function HomeHeader() {
         </View>
         <Typo type="h1">Mau kemana hari ini ? </Typo>
       </View>
-    </Container>
+    </MainContainer>
   );
 }

@@ -1,8 +1,8 @@
 import { Tabs } from 'expo-router';
 import React from 'react';
 
-import TabBar from '@/components/Molecules/TabBar';
-import MainProviders from '@/components/layouts/MainProviders';
+import TabBar from '@/src/components/Molecules/TabBar';
+import MainProviders from '@/src/components/layouts/MainProviders';
 
 export default function HomeLayout() {
   return (
