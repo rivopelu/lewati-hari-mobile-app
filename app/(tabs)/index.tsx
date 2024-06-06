@@ -5,8 +5,8 @@ import { Container } from '@/components/atoms/Container';
 import { HeaderGradient } from '@/components/atoms/HeaderGradient';
 import { InputSearch } from '@/components/atoms/InputSearch';
 import { Spacer } from '@/components/atoms/Spacer';
+import { AdsSwiper } from '@/components/layouts/AdsSwiper';
 import HomeHeader from '@/components/layouts/HomeHeader';
-import { HomeRecommendation } from '@/components/layouts/HomeRecommendation';
 import { SIZE } from '@/constants/STYLES';
 
 export default function Index() {
@@ -22,7 +22,7 @@ export default function Index() {
           <InputSearch />
         </Container>
         <Spacer y={SIZE.XS} />
-        <HomeRecommendation />
+        <AdsSwiper />
       </View>
     </ScrollView>
   );
