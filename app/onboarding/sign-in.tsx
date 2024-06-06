@@ -1,5 +1,5 @@
 import { Image, Text } from '@rneui/base';
-import { Link } from 'expo-router';
+import { Link, useRouter } from 'expo-router';
 import { useState } from 'react';
 import { StatusBar, View } from 'react-native';
 
@@ -14,6 +14,7 @@ import { Colors } from '@/constants/Colors';
 
 export default function SignInScreen() {
   const [showPassword, setShowPassword] = useState<boolean>(false);
+  const router = useRouter();
   return (
     <MainProviders>
       <View style={{ flex: 1 }}>
@@ -63,7 +64,7 @@ export default function SignInScreen() {
                 checked={showPassword}
                 onChange={(e) => setShowPassword(e)}
               />
-              <Btn text="MASUK" />
+              <Btn onPress={() => router.push('/')} text="MASUK" />
               <View style={{ alignItems: 'center', justifyContent: 'center' }}>
                 <View style={{ flexDirection: 'row', gap: 7 }}>
                   <Text>Belum Punya Akun ?</Text>
