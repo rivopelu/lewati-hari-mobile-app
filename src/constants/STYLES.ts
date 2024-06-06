@@ -29,6 +29,7 @@ export const STYLES = {
 export const SIZE = {
   SM: 12,
   MD: 16,
+  XXS: 4,
   XS: 8,
   LG: 20,
   XL: 24,
