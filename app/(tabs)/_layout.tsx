@@ -1,8 +1,8 @@
 import { Tabs } from 'expo-router';
 import React from 'react';
 
+import TabBar from '@/components/Molecules/TabBar';
 import MainProviders from '@/components/layouts/MainProviders';
-import TabBar from '@/components/molecules/TabBar';
 
 export default function HomeLayout() {
   return (
@@ -11,7 +11,7 @@ export default function HomeLayout() {
         <Tabs.Screen
           name="index"
           options={{
-            title: 'Beranda',
+            title: 'Home',
             headerShown: false,
           }}
         />

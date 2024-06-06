@@ -1,7 +1,7 @@
 import { Text } from '@rneui/base';
 import { Button } from '@rneui/themed';
 
-import { Colors } from '@/constants/Colors';
+import { STYLES } from '@/constants/STYLES';
 
 export function Btn(props: IProps) {
   return (
@@ -14,9 +14,9 @@ export function Btn(props: IProps) {
           borderWidth: 1,
           borderColor: '#000',
           borderRadius: 9999,
-          backgroundColor: Colors.primary[10],
+          backgroundColor: STYLES.COLORS.PRIMARY[10],
         }}>
-        <Text style={{ color: Colors.primary.main, fontWeight: '700' }}>{props.text}</Text>
+        <Text style={{ color: STYLES.COLORS.PRIMARY.MAIN, fontWeight: '700' }}>{props.text}</Text>
       </Button>
     </>
   );

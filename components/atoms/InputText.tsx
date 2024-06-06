@@ -1,6 +1,6 @@
 import { KeyboardTypeOptions, StyleSheet, Text, TextInput, View } from 'react-native';
 
-import { Colors } from '@/constants/Colors';
+import { STYLES } from '@/constants/STYLES';
 
 export function InputText(props: IProps) {
   return (
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
   label: {
     marginBottom: 5,
     fontSize: 14,
-    color: Colors.system.text,
+    color: STYLES.COLORS.SYSTEM.TEXT,
   },
   required: {
     color: 'red',
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   inputContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: Colors.system.inputBackground,
+    backgroundColor: STYLES.COLORS.SYSTEM.INPUT_BACKGROUND,
     borderWidth: 1,
     padding: 12,
     borderRadius: 8,
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
   input: {
     flex: 1,
     fontSize: 16,
-    color: Colors.system.text,
+    color: STYLES.COLORS.SYSTEM.TEXT,
   },
   icon: {
     marginHorizontal: 10,

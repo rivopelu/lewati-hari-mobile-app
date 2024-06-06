@@ -6,7 +6,7 @@ import { Container } from '@/components/atoms/Container';
 import { HeaderGradient } from '@/components/atoms/HeaderGradient';
 import { Spacer } from '@/components/atoms/Spacer';
 import MainProviders from '@/components/layouts/MainProviders';
-import { Colors } from '@/constants/Colors';
+import { STYLES } from '@/constants/STYLES';
 
 export default function OnboardingScreen({ navigation }: any) {
   const router = useRouter();
@@ -40,7 +40,7 @@ export default function OnboardingScreen({ navigation }: any) {
                     Temukan tempat terbaik yang cocok buat kamu
                   </Text>
                   <Spacer y={8} />
-                  <Text style={{ textAlign: 'center', color: Colors.system.textGray }}>
+                  <Text style={{ textAlign: 'center', color: STYLES.system.textGray }}>
                     Jelajahi berbagai pilihan tempat menarik, dari cafe tersembunyi hingga coffee
                     shop populer di sekitarmu
                   </Text>
@@ -50,7 +50,7 @@ export default function OnboardingScreen({ navigation }: any) {
                   <View style={{ flexDirection: 'row', gap: 7 }}>
                     <Text>Belum Punya Akun ?</Text>
                     <Link href="/onboarding/sign-up" style={{ padding: 0, margin: 0 }}>
-                      <Text style={{ color: Colors.primary.main }}>Silahkan Daftar</Text>
+                      <Text style={{ color: STYLES.primary.main }}>Silahkan Daftar</Text>
                     </Link>
                   </View>
                 </View>

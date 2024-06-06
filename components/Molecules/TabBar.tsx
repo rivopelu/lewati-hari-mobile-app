@@ -2,7 +2,7 @@ import { AntDesign, Feather } from '@expo/vector-icons';
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-import { Colors } from '@/constants/Colors';
+import { STYLES } from '@/constants/STYLES';
 
 const TabBar = ({ state, descriptors, navigation }: any) => {
   const icons = {
@@ -10,8 +10,8 @@ const TabBar = ({ state, descriptors, navigation }: any) => {
     order: (props: any) => <Feather name="compass" size={26} color={greyColor} {...props} />,
   };
 
-  const primaryColor = Colors.primary.main;
-  const greyColor = Colors.system.textGray;
+  const primaryColor = STYLES.COLORS.PRIMARY.MAIN;
+  const greyColor = STYLES.COLORS.SYSTEM.TEXT_GRAY;
   return (
     <View style={styles.tabbar}>
       {state.routes.map((route: any, index: number) => {
@@ -85,19 +85,22 @@ const TabBar = ({ state, descriptors, navigation }: any) => {
 const styles = StyleSheet.create({
   tabbar: {
     position: 'absolute',
-    bottom: 25,
+    bottom: 0,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     backgroundColor: 'white',
-    marginHorizontal: 20,
-    paddingVertical: 15,
+    marginHorizontal: 0,
+    paddingVertical: 24,
     borderRadius: 25,
     borderCurve: 'continuous',
     shadowColor: 'black',
     shadowOffset: { width: 0, height: 10 },
     shadowRadius: 10,
     shadowOpacity: 0.1,
+    borderStyle: 'solid',
+    borderWidth: 1,
+    borderColor: STYLES.COLORS.SYSTEM.BORDER,
   },
   tabbarItem: {
     flex: 1,

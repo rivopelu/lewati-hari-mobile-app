@@ -11,7 +11,7 @@ import { Btn } from '@/components/atoms/Btn';
 import { Link } from 'expo-router';
 import { InputText } from '@/components/atoms/InputText';
 import { Image } from '@rneui/themed';
-import { Colors } from '@/constants/Colors';
+import { STYLES } from '@/constants/STYLES';
 
 export default function SignUpScreen() {
   const [showPassword, setShowPassword] = useState<boolean>(false);
@@ -86,14 +86,14 @@ export default function SignUpScreen() {
                   <View style={{ flexDirection: 'row', gap: 7 }}>
                     <Text>Udah punya akun ?</Text>
                     <Link href="/onboarding/sign-in" style={{ padding: 0, margin: 0 }}>
-                      <Text style={{ color: Colors.primary.main }}>Masuk disini</Text>
+                      <Text style={{ color: STYLES.primary.main }}>Masuk disini</Text>
                     </Link>
                   </View>
                 </View>
               </View>
             </Container>
             <Container>
-              <Text style={{ textAlign: 'center', color: Colors.system.textGray }}>V 0.1.0</Text>
+              <Text style={{ textAlign: 'center', color: STYLES.system.textGray }}>V 0.1.0</Text>
             </Container>
           </View>
         </View>

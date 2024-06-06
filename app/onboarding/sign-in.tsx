@@ -10,7 +10,7 @@ import { InputText } from '@/components/atoms/InputText';
 import MainCheckbox from '@/components/atoms/MainCheckbox';
 import { Spacer } from '@/components/atoms/Spacer';
 import MainProviders from '@/components/layouts/MainProviders';
-import { Colors } from '@/constants/Colors';
+import { STYLES } from '@/constants/STYLES';
 
 export default function SignInScreen() {
   const [showPassword, setShowPassword] = useState<boolean>(false);
@@ -69,14 +69,14 @@ export default function SignInScreen() {
                 <View style={{ flexDirection: 'row', gap: 7 }}>
                   <Text>Belum Punya Akun ?</Text>
                   <Link href="/onboarding/sign-up" style={{ padding: 0, margin: 0 }}>
-                    <Text style={{ color: Colors.primary.main }}>Silahkan Daftar</Text>
+                    <Text style={{ color: STYLES.primary.main }}>Silahkan Daftar</Text>
                   </Link>
                 </View>
               </View>
             </View>
           </Container>
           <Container>
-            <Text style={{ textAlign: 'center', color: Colors.system.textGray }}>V 0.1.0</Text>
+            <Text style={{ textAlign: 'center', color: STYLES.system.textGray }}>V 0.1.0</Text>
           </Container>
         </View>
       </View>

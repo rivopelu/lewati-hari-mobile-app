@@ -1,11 +1,12 @@
-import { Colors } from '@/constants/Colors';
 import { ThemeProvider, createTheme } from '@rneui/themed';
 import React, { ReactNode } from 'react';
+
+import { STYLES } from '@/constants/STYLES';
 
 export default function ThemeConfig(props: IProps) {
   const theme = createTheme({
     lightColors: {
-      primary: Colors.primary.main,
+      primary: STYLES.COLORS.PRIMARY.MAIN,
     },
 
     components: {
